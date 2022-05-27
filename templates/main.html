@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+  <div class="container">
+    
+    <form 
+      action="/display" 
+      method="post" 
+      enctype="multipart/form-data">
+      
+      <input 
+        class="btn" 
+        type="file" 
+        id="file" 
+        name="file" 
+        />
+
+      <button class="btn" type="submit"> Search  </button>
+    </form>
+
+    <!-- <div class="list">
+      {%for obj in object%}
+        <li><a href="{{obj}}" target="_blank">{{obj}}</a></li>
+       </ul>
+      </div>
+      {%endfor%}
+      {% if isEmpty == true %}
+      <div>
+        No URL Found
+      </div>
+      {% endif %}
+    </div> -->
+
+    <div class="col-1">
+      {% if publicImgUri == '' %}
+      <img
+        class="search-img "
+        src="{{publicImgUri}}"
+        alt="search-img"
+      />
+      {% elif publicImgUri %}
+      <img class="search-img" src="{{publicImgUri}}" alt="search-img" />
+      {% endif %}
+    </div>
+
+    <div class="row">
+    <div class="col-2">
+      {%for obj in object%}
+
+      <div class="serch-item">
+        <a href="{{obj}}" target="_blank">{{obj}}</a>
+      </div>
+
+      {%endfor%}
+      <!--  -->
+      {% if isEmpty == true %}
+
+      <div class="no-result">
+        There is no search result with uploaded image
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</body> 
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div>
+      <ul>
+      <form action="/display" method="post" enctype="multipart/form-data">
+        <li><input class="input" type="file" id="file" name="filename" class="filename" /></li>
+        <button> Search Image </button>
+      </form>
+
+      <div class="list">
+          {%for obj in object%}
+            <li><a href="{{obj}}" target="_blank">{{obj}}</a></li>
+           </ul>
+          </div>
+          {%endfor%}
+          {% if null == true %}
+          <div>
+            No URL Found
+          </div>
+          {% endif %}
+        </div>
+  </body>
+</html>
+
+
+ -->
