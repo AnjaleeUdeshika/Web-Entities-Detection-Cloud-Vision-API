@@ -22,19 +22,6 @@
       <button class="btn" type="submit"> Search  </button>
     </form>
 
-    <!-- <div class="list">
-      {%for obj in object%}
-        <li><a href="{{obj}}" target="_blank">{{obj}}</a></li>
-       </ul>
-      </div>
-      {%endfor%}
-      {% if isEmpty == true %}
-      <div>
-        No URL Found
-      </div>
-      {% endif %}
-    </div> -->
-
     <div class="col-1">
       {% if publicImgUri == '' %}
       <img
@@ -70,33 +57,3 @@
 
 
 
-<!-- <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="/static/style.css" />
-  </head>
-  <body>
-    <div>
-      <ul>
-      <form action="/display" method="post" enctype="multipart/form-data">
-        <li><input class="input" type="file" id="file" name="filename" class="filename" /></li>
-        <button> Search Image </button>
-      </form>
-
-      <div class="list">
-          {%for obj in object%}
-            <li><a href="{{obj}}" target="_blank">{{obj}}</a></li>
-           </ul>
-          </div>
-          {%endfor%}
-          {% if null == true %}
-          <div>
-            No URL Found
-          </div>
-          {% endif %}
-        </div>
-  </body>
-</html>
-
-
- -->
