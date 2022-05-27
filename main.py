@@ -21,19 +21,18 @@ def uploadimg():
 
     file = request.files['file']
 
-    # filename = request.files['filename']
+  
 
     """Uploads a file to the bucket."""
     
     # print(filename)
 
-    # The ID of your GCS bucket
+   
     bucket_name = "anjalee-cloud-workshop-p2.appspot.com"
-
 
     destination_blob_name = '%s/%s' % ('image', file.filename)
 
-    # The ID of your GCS object
+ 
     source_file_name = ('gs://anjalee-cloud-workshop-p2.appspot.com/image/' + file.filename)
     
     storage_client = storage.Client()
