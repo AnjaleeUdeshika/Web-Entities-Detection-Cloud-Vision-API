@@ -36,6 +36,7 @@ pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pycodestyle==2.8.0
 requests==2.27.1
+SQLAlchemy==1.3.8
 rsa==4.8
 six==1.16.0
 soupsieve==2.3.2.post1
